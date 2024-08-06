@@ -8,7 +8,6 @@ colorama.init()
 
 parser = argparse.ArgumentParser(description='Get command line arguments')
 parser.add_argument('--contributors', action='store_true', help='Get contributors')
-parser.add_argument('--commits', action='store_true', help='Get commits')
 parser.add_argument('--commit-lines', action='store_true', help='Get commit lines')
 parser.add_argument('-path', type=str, help='Path to the repository')
 parser.add_argument('-since', type=str, help='Begin date')
