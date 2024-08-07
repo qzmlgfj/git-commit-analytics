@@ -55,10 +55,9 @@ if args.commit_lines:
             contributor = contributor.split('\t')
             contributor_name = contributor[1].split(' ')[0]
             contributor_email = contributor[1].split(' ')[1][1:-1]
-            contributor_commits = repo.git.log('--author=' + contributor_email, '--pretty=tformat:', '--numstat').split('\n')
+            contributor_commits = repo.git.log('--author=' + contributor_email, '--pretty=tformat:', '--numstat', *git_params).split('\n')
             contributor_additions = 0
             contributor_deletions = 0
-            contributor_modifications = 0
 
             for commit in contributor_commits:
                 commit = commit.split('\t')
